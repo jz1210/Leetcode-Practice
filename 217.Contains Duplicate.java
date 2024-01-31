@@ -43,11 +43,11 @@ class Solution {
 //Other solution: Hash Set and Hash Map
 class Solution {
     public boolean containsDuplicate(int[] nums) {
-        HashSet<Integer> check = new HashSet<>();
+        HashSet<Integer> set = new HashSet<>();
         for (int num : nums) {
-            if (check.contains(num))
+            if (set.contains(num))
                 return true;
-            check.add(num);
+            aet.add(num);
         }
         return false;
     }
@@ -55,11 +55,11 @@ class Solution {
 
 class Solution {
     public boolean containsDuplicate(int[] check) {
-        HashMap<Integer, Integer> check = new HashMap<>();
+        HashMap<Integer, Integer> map = new HashMap<>();
         for (int num : nums) {
-            if (check.containsKey(num) && check.get(num) >= 1)
+            if (map.containsKey(num) && map.get(num) >= 1)
                 return true;
-            check.put(num, check.getOrDefault(num, 0) + 1);
+            map.put(num, map.getOrDefault(num, 0) + 1);
         }
         return false;
     }
